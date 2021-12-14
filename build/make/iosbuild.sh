@@ -34,7 +34,8 @@ ARM_TARGETS="arm64-darwin-gcc
              armv7-darwin-gcc
              armv7s-darwin-gcc"
 SIM_TARGETS="x86-iphonesimulator-gcc
-             x86_64-iphonesimulator-gcc"
+             x86_64-iphonesimulator-gcc
+             arm64-iphonesimulator-gcc"
 OSX_TARGETS="x86-darwin16-gcc
              x86_64-darwin16-gcc"
 TARGETS="${ARM_TARGETS} ${SIM_TARGETS}"

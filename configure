@@ -99,6 +99,7 @@ EOF
 # alphabetically by architecture, generic-gnu last.
 all_platforms="${all_platforms} arm64-android-gcc"
 all_platforms="${all_platforms} arm64-darwin-gcc"
+all_platforms="${all_platforms} arm64-iphonesimulator-gcc"
 all_platforms="${all_platforms} arm64-linux-gcc"
 all_platforms="${all_platforms} arm64-win64-gcc"
 all_platforms="${all_platforms} arm64-win64-vs15"
