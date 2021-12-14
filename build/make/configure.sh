@@ -908,8 +908,8 @@ process_common_toolchain() {
       add_ldflags "-mmacosx-version-min=10.14"
       ;;
     *-iphonesimulator-*)
-      add_cflags  "-miphoneos-version-min=${IOS_VERSION_MIN}"
-      add_ldflags "-miphoneos-version-min=${IOS_VERSION_MIN}"
+      add_cflags  "-mios-simulator-version-min=${IOS_VERSION_MIN}"
+      add_ldflags "-mios-simulator-version-min=${IOS_VERSION_MIN}"
       iossim_sdk_dir="$(show_darwin_sdk_path iphonesimulator)"
       if [ -d "${iossim_sdk_dir}" ]; then
         add_cflags  "-isysroot ${iossim_sdk_dir}"
@@ -1385,6 +1385,7 @@ EOF
         iphonesimulator)
           add_asflags -f macho${bits}
           enabled x86 && sim_arch="-arch i386" || sim_arch="-arch x86_64"
+          enabled arm && sim_arch="-arch arm64"
           add_cflags  ${sim_arch}
           add_ldflags ${sim_arch}
 
