@@ -20,7 +20,7 @@
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
-		<string>iPhoneOS</string>
+		<string>${PLATFORM}</string>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>${VERSION}</string>
