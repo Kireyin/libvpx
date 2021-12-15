@@ -862,7 +862,6 @@ process_common_toolchain() {
       ;;
   esac
 
-PLATFORM="iPhoneOS"
   case ${toolchain} in
     *-darwin8-*)
       add_cflags  "-mmacosx-version-min=10.4"
@@ -909,9 +908,8 @@ PLATFORM="iPhoneOS"
       add_ldflags "-mmacosx-version-min=10.14"
       ;;
     *-iphonesimulator-*)
-      PLATFORM="iPhoneSimulator"
-      add_cflags  "-mios-simulator-version-min=${IOS_VERSION_MIN}"
-      add_ldflags "-mios-simulator-version-min=${IOS_VERSION_MIN}"
+      add_cflags  "-miphoneos-version-min=${IOS_VERSION_MIN}"
+      add_ldflags "-miphoneos-version-min=${IOS_VERSION_MIN}"
       iossim_sdk_dir="$(show_darwin_sdk_path iphonesimulator)"
       if [ -d "${iossim_sdk_dir}" ]; then
         add_cflags  "-isysroot ${iossim_sdk_dir}"
